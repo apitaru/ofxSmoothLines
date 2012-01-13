@@ -1,0 +1,13 @@
+Detailed information on this coming soon. 
+
+Basically: 
+
+iOS devices don't allow us to draw antialiased (smooth) lines easily. 
+
+I came across this amazing method to 'fake' the smoothness here - http://answers.oreilly.com/topic/1669-how-to-render-anti-aliased-lines-with-textures-in-ios-4/
+
+One of its benefits over other methods is that it is relatively easy on the cpu and doesn't harm your fps too as much.
+
+At the moment this is just an initial commit with proof-of-concept. I'll steadily make this into a nice API in the following weeks. 
+
+Amit
