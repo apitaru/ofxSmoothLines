@@ -1,7 +1,7 @@
-#include "ofxSmootheLines.h"
+#include "ofxSmoothLines.h"
 
 //--------------------------------------------------------------
-void ofxSmootheLines::setup(){	
+void ofxSmoothLines::setup(){	
 
 	ofFbo::Settings settings; 
 	max(ofGetWidth(),ofGetHeight());
@@ -28,7 +28,7 @@ void ofxSmootheLines::setup(){
 }
 
 
-void ofxSmootheLines::_makeMesh()
+void ofxSmoothLines::_makeMesh()
 {
 
 	polyLine.simplify(0.3); // 0.3
@@ -91,7 +91,7 @@ void ofxSmootheLines::_makeMesh()
 
 
 //--------------------------------------------------------------
-void ofxSmootheLines::draw(){
+void ofxSmoothLines::draw(){
 
 	ofEnableAlphaBlending();
 	img.draw(10, 10);
@@ -132,7 +132,7 @@ void ofxSmootheLines::draw(){
 	clearFlag = false;
 }
 
-void ofxSmootheLines::drawToFBO()
+void ofxSmoothLines::drawToFBO()
 {	
 
 	fbo.begin();
@@ -165,7 +165,7 @@ void ofxSmootheLines::drawToFBO()
 
 
 
-void ofxSmootheLines::addPolyVertices(float x, float y)
+void ofxSmoothLines::addPolyVertices(float x, float y)
 {
 	
 	vector <ofPoint> rawPoints = rawPolyLine.getVertices();
@@ -202,7 +202,7 @@ void ofxSmootheLines::addPolyVertices(float x, float y)
 }
 
 //--------------------------------------------------------------
-void ofxSmootheLines::startLine(float x, float y){
+void ofxSmoothLines::startLine(float x, float y){
 
 	polyLine.lineTo(x, y);
 	rawPolyLine.lineTo(x, y);		
@@ -210,13 +210,13 @@ void ofxSmootheLines::startLine(float x, float y){
 	linesToDraw++;
 }
 
-void ofxSmootheLines::addVertex(float x, float y){
+void ofxSmoothLines::addVertex(float x, float y){
 	
 		addPolyVertices(x,y);
 }
 
 //--------------------------------------------------------------
-void ofxSmootheLines::endLine(float x, float y){	
+void ofxSmoothLines::endLine(float x, float y){	
 	polyLine.lineTo(x, y, 0);
 	rawPolyLine.lineTo(x, y, 0);		
 	drawToFBO();
@@ -224,7 +224,7 @@ void ofxSmootheLines::endLine(float x, float y){
 }
 
 //--------------------------------------------------------------
-void ofxSmootheLines::clearAllLines(){	
+void ofxSmoothLines::clearAllLines(){	
 	clearFlag = true;
 }
 

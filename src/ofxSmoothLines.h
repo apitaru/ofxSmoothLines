@@ -4,7 +4,7 @@
 #include "ofxiPhone.h"
 #include "ofxiPhoneExtras.h"
 
-class ofxSmootheLines  {
+class ofxSmoothLines  {
 	
 	struct clr {
 		unsigned char r;

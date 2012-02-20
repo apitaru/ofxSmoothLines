@@ -9,7 +9,7 @@ void testApp::setup(){
 	
 	//ofSetVerticalSync(true);
 
-	mySmootheLines.setup();
+	mySmoothLines.setup();
 	
 }
 
@@ -21,7 +21,7 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	mySmootheLines.draw();
+	mySmoothLines.draw();
 }
 
 //--------------------------------------------------------------
@@ -33,7 +33,7 @@ void testApp::exit(){
 void testApp::touchDown(ofTouchEventArgs &touch){
 	if(touch.id == 0)
 	{
-		mySmootheLines.startLine(touch.x, touch.y);
+		mySmoothLines.startLine(touch.x, touch.y);
 	}
 
 }
@@ -44,18 +44,18 @@ void testApp::touchMoved(ofTouchEventArgs &touch){
 
 	if(touch.id == 0)
 	{
-		mySmootheLines.addVertex(touch.x, touch.y);
+		mySmoothLines.addVertex(touch.x, touch.y);
 	}
 }
 
 //--------------------------------------------------------------
 void testApp::touchUp(ofTouchEventArgs &touch){	
-	mySmootheLines.endLine(touch.x, touch.y);
+	mySmoothLines.endLine(touch.x, touch.y);
 }
 
 //--------------------------------------------------------------
 void testApp::touchDoubleTap(ofTouchEventArgs &touch){
-	mySmootheLines.clearAllLines();
+	mySmoothLines.clearAllLines();
 }
 
 //--------------------------------------------------------------

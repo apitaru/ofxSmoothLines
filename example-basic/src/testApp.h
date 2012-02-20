@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "ofxiPhone.h"
 #include "ofxiPhoneExtras.h"
-#include "ofxSmootheLines.h"
+#include "ofxSmoothLines.h"
 
 class testApp : public ofxiPhoneApp {
 	
@@ -24,7 +24,7 @@ public:
 	void gotMemoryWarning();
 	void deviceOrientationChanged(int newOrientation);
 	
-	ofxSmootheLines mySmootheLines;
+	ofxSmoothLines mySmoothLines;
 
 };
 

@@ -14,8 +14,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-               BuildableName = "SmootheLinesExample.app"
-               BlueprintName = "SmootheLinesExample"
+               BuildableName = "SmoothLinesExample.app"
+               BlueprintName = "SmoothLinesExample"
                ReferencedContainer = "container:example-basic.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,8 +32,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "SmootheLinesExample.app"
-            BlueprintName = "SmootheLinesExample"
+            BuildableName = "SmoothLinesExample.app"
+            BlueprintName = "SmoothLinesExample"
             ReferencedContainer = "container:example-basic.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "SmootheLinesExample.app"
-            BlueprintName = "SmootheLinesExample"
+            BuildableName = "SmoothLinesExample.app"
+            BlueprintName = "SmoothLinesExample"
             ReferencedContainer = "container:example-basic.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,8 +69,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "SmootheLinesExample.app"
-            BlueprintName = "SmootheLinesExample"
+            BuildableName = "SmoothLinesExample.app"
+            BlueprintName = "SmoothLinesExample"
             ReferencedContainer = "container:example-basic.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
