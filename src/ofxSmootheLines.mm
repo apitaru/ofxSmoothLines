@@ -133,19 +133,34 @@ void ofxSmootheLines::draw(){
 }
 
 void ofxSmootheLines::drawToFBO()
-{
+{	
+
 	fbo.begin();
+	ofPushMatrix();
+
+	if (iPhoneGetOrientation() == OFXIPHONE_ORIENTATION_LANDSCAPE_RIGHT)
+	{
+		ofRotate(-90, 0, 0, 1);
+		ofTranslate(-1024, 0, 0);
+	} else if  (iPhoneGetOrientation() == OFXIPHONE_ORIENTATION_LANDSCAPE_LEFT)
+	{
+		ofRotate(90, 0, 0, 1);
+		ofTranslate(0, -1024, 0);		
+	}
+	
+	
 	img.getTextureReference().bind();
 	if(polyLine.getVertices().size() > 0) _makeMesh();
 	mesh.draw();
 	
 	img.getTextureReference().unbind();
-	
+	ofPopMatrix();	
 	fbo.end();
 	//activeLineRef->pts.erase(activeLineRef->pts.begin(),activeLineRef->pts.end() - 3);
 	mesh.clear();
 	polyLine.clear();
 	linesToDraw = 0;
+
 }
 
 

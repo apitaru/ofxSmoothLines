@@ -5,7 +5,8 @@ void testApp::setup(){
 	// register touch events
 	ofRegisterTouchEvents(this);
 	ofxiPhoneAlerts.addListener(this);
-	//iPhoneSetOrientation(OFXIPHONE_ORIENTATION_LANDSCAPE_RIGHT);
+	iPhoneSetOrientation(OFXIPHONE_ORIENTATION_LANDSCAPE_LEFT);
+	
 	//ofSetVerticalSync(true);
 
 	mySmootheLines.setup();
