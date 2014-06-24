@@ -1,8 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxiPhone.h"
-#include "ofxiPhoneExtras.h"
+#include "ofAppiOSWindow.h"
+
 
 class ofxSmoothLines  {
 	
@@ -24,28 +24,31 @@ public:
 	
 	void setup();
 	void draw();
-	void startLine(float x, float y);
-	void addVertex(float x, float y);
-	void endLine(float x, float y);
+	void startLine(float x, float y, float z);
+	void continueLine(float x, float y, float z);
+	void endLine(float x, float y, float z);
+	
+	void setBrushImage(ofImage brushImage);
+	
+	void setLineWidth(float w);
 	void clearAllLines();
 
 	
 private: 
 	void _makeMesh();
-	void addPolyVertices(float x, float y);
-	void drawToFBO();
+	void addPolyVertices(float x, float y, float z);
 	
-	Boolean clearFlag;
 	ofPolyline polyLine;
 	ofPolyline rawPolyLine;
-	ofFbo fbo;
-	ofImage img;
+
+	ofImage _brushImage;
 	ofMesh mesh;
 	
-	int lineSizePrev;
-	int lineSizeNow;
-	int linesToDraw;
 	int curveNum;
+	float lineWidth = 2;
+
+	
+
 };
 
 
